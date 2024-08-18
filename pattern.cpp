@@ -90,12 +90,12 @@ void printpattern10(int n){
             }
 
         }
-        else{
-            for(int k=2*n-1;k>i;k--){
-                cout<<"*";
-            }
-        }
-        cout<<endl;
+        // else{
+        //     for(int k=2*n-1;k>i;k--){
+        //         cout<<"*";
+        //     }
+        // }
+        // cout<<endl;
     }
 
 
