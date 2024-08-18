@@ -98,11 +98,23 @@ void printpattern10(int n){
         cout<<endl;
     }
 
-
 }
+void printpattern11(int n){
+    int first_value=1;
+    for (int i=0;i<n;i++){
+        if (i%2==0) first_value=1 ;
+        else first_value=0;
+        for (int j=0;j<=i;j++){
+            cout<<first_value;
+            first_value=1-first_value;
+        }
+        cout<<endl;
+    }
+}
+
 int main(){
     int n;
     cin>>n;
-    printpattern10(n); 
+    printpattern11(n); 
     
 }
