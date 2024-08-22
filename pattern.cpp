@@ -111,10 +111,36 @@ void printpattern11(int n){
         cout<<endl;
     }
 }
+void printpattern12(int n){
 
+    for(int i=0;i<n;i++){
+        for (int j=0;j<=i;j++){
+            cout<<j+1;
+        }
+        for (int k=2*n-2;k>2*i;k--){
+            cout<<" ";
+        
+        }
+        for (int l=i+1;l>0;l--){
+            cout<<l;
+        }
+        cout<<endl;
+    }
+}
+void printpattern13(int n){
+    int count=1;
+    for (int i=0;i<n;i++){
+        for (int j=0;j<=i;j++){
+            cout<<count;
+            count++;
+        }
+        cout<<endl;
+    }
+
+}
 int main(){
     int n;
     cin>>n;
-    printpattern11(n); 
+    printpattern13(n); 
     
 }
