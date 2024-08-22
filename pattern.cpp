@@ -138,9 +138,85 @@ void printpattern13(int n){
     }
 
 }
+void printpattern14(int n){
+    for (int i=0;i<n;i++){
+        for (char j='A';j<='A'+i;j++){
+            cout<<j;
+        }
+        cout<<endl;
+    }
+}
+void printpattern15(int n){
+    for (int i=n;i>0;i--){
+        for (char j='A';j<'A'+i;j++){
+            cout<<j;
+        }
+        cout<<endl;
+    }
+}
+void printpattern16(int n){
+    for (int i=0;i<n;i++){
+        char ch='A'+i;
+        for (int j=0;j<=i;j++){
+            cout<<ch;
+        }
+        cout<<endl;
+    }
+}
+void printpattern17(int n){
+    for (int i=0;i<n;i++){
+        for (int j=n;j>i+1;j--){
+            cout<<" ";
+        }
+        for (char ch='A';ch<='A'+i;ch++){
+            cout<<ch;
+        }
+        for (char j='A'+i-1;j>='A';j--){
+            cout<<j;
+            
+        }
+        cout<<endl;
+
+    }
+}
+void printpattern18(int n){
+    for (int i=0;i<n;i++){
+        for (char ch='A'+n-1-i;ch<=('A'+n-1);ch++)
+        {cout<<ch;}
+        cout<<endl;
+    }
+}
+void printpattern19(int n){
+    for (int i=0;i<2*n;i++){
+        if (i<n){
+            for (int j=n;j>i;j--){
+                cout<<"*";
+            }
+            for (int k=0;k<2*i;k++){
+                cout<<" ";
+            }
+            for (int l=n;l>i;l--){
+                cout<<"*";
+            }
+        }
+        else{
+            for (int a=n;a<=i;a++){
+                cout<<"*";
+            }
+            for (int s=2*n-2;s>2*(i-n);s--){
+                cout<<" ";
+            }
+            for (int d=n;d<=i;d++){
+                cout<<"*";
+            }
+
+        }
+        cout<<endl;
+   } 
+}
 int main(){
     int n;
     cin>>n;
-    printpattern13(n); 
+    printpattern19(n); 
     
 }
