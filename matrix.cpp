@@ -10,7 +10,7 @@ int main(){
     cout<<"enter the elements of matrix 1:\n";
     for(int i=0;i<r1;i++){
         for (int j=0;j<c1;j++){
-            cin>>arr1[i][j];
+            cin>>arr1[i][j];  
         }
     }
     cout<<"enter the elements of matrix 2:\n";
