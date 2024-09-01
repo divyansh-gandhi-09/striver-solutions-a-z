@@ -1,11 +1,11 @@
 #include <stdio.h>
-float quadratic_eq(int x){
+float quadratic_eq(float x){
     return x*x-4;
 }
 int main(){
     int n;
     float a,b,c,fa,fb,fc;
-    printf("Enter the number of iteration");
+    printf("Enter the number of iteration:");
     scanf("%d",&n);
     up:
         
@@ -14,9 +14,9 @@ int main(){
         fa=quadratic_eq(a);
         fb=quadratic_eq(b);
         if (fa*fb<0){
-            printf("roots of the given equation:-\n");
+            printf("approximate root of the given equation:-\n");
             for (int i=0;i<n;i++){
-                c=(a+b)/2;
+                c=((a+b)/2);
                 fc=quadratic_eq(c);
                 if (fa*fc<0){
                     b=c;
@@ -24,14 +24,15 @@ int main(){
                 else{
                     a=c;
                 }
-                 printf("%f",c);
+                 
             }
+            printf("%f\n",c);
         }
         else if(fa*fb==0){
             if ((fa==0 && fb==0)){
                 printf("roots of the given equation are %f,%f",a,b);
             }
-            else if (fa==a){
+            else if (fa==0){
                 printf("root of the given eqation is %f",a);
             }
             else {
@@ -40,7 +41,7 @@ int main(){
 
         }
         else{
-            printf("wrong initial value");
+            printf("wrong initial values\n");
             goto up;
 
         }
