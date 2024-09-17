@@ -21,15 +21,15 @@ public:
     }
 
     void display() const {
-        cout << "\n\n String stored in class = " << s;
+        cout << "\nString stored in class = " << s;
     }
 
     void displayLength() const {
-        cout << "\n\n Length of string stored in class = " << s.length();
+        cout << "\nLength of string stored in class = " << s.length();
     }
 
     void toLower() {
-        cout << "\n\n String converted to lowercase";
+        cout << "\nString converted to lowercase";
         for (char &c : s) {
             c = tolower(c);
         }
@@ -37,7 +37,7 @@ public:
     }
 
     void toUpper() {
-        cout << "\n\n String converted to uppercase";
+        cout << "\nString converted to uppercase";
         for (char &c : s) {
             c = toupper(c);
         }
@@ -49,53 +49,60 @@ int main() {
     string s1;
     int choice;
 
-    cout << "\n\n Program to perform operations on string";
-    cout << "\n ^^^^^^^ ^^ ^^^^^^^ ^^^^^^^^^^ ^^ ^^^^^^";
-    cout << "\n\n Enter string to be stored in class: ";
+    cout <<"Program to perform operations on string\n";
+    cout << "Enter string to be stored in class: ";
     getline(cin, s1);
 
     String s(s1);
-
+    cout << "Menu\n 1. String concatenation \n 2. String copy \n 3. String comparison \n 4.Display String \n 5. Display length of string \n 6. Convert string to lowercase \n 7. Convert string touppercase \n 8. Exit ";
     while (true) {
         string d;
-        cout << "Menu\n 1. String concatenation \n 2. String copy \n 3. String comparison \n 4.Display String \n 5. Display length of string \n 6. Convert string to lowercase \n 7. Convert string touppercase \n 8. Exit ";
+        cout<<"\nenter your choice:";
         cin >> choice;
         cin.ignore(); // to clear the newline character left by cin
 
         if (choice == 1) {
-            cout << "\n\n Enter the string to concatenate: ";
+            cout << "\nEnter the string to concatenate: ";
             getline(cin, d);
             s = s + d;
             cout << "\n After concatenation....";
             s.display();
-        } else if (choice == 2) {
-            cout << "\n\n Enter the string to copy: ";
+        } 
+        else if (choice == 2) {
+            cout << "\nEnter the string to copy: ";
             getline(cin, d);
             s = d;
             cout << "\n After copying....";
             s.display();
-        } else if (choice == 3) {
-            cout << "\n\n Enter the string to compare: ";
+        } 
+        else if (choice == 3) {
+            cout << "Enter the string to compare: ";
             getline(cin, d);
             if (s <= d) {
-                cout << "\n Strings are equal or first is lexicographically smaller";
+                cout << "\nStrings are equal or first is lexicographically smaller";
             } else {
-                cout << "\n First string is lexicographically greater";
+                cout << "\nFirst string is lexicographically greater";
             }
-        } else if (choice == 4) {
+        } 
+        else if (choice == 4) {
             s.display();
-        } else if (choice == 5) {
-            s.displayLength();
-        } else if (choice == 6) {
-            s.toLower();
-        } else if (choice == 7) {
-            s.toUpper();
-        } else if (choice == 8) {
-            break;
-        } else {
-            cout << "\n\n Wrong choice";
         }
-        cin.get(); // Wait for a keypress before continuing
+        
+        else if (choice == 5) {
+            s.displayLength();
+        } 
+        else if (choice == 6) {
+            s.toLower();
+        } 
+        else if (choice == 7) {
+            s.toUpper();
+        } 
+        else if (choice == 8) {
+            break;
+        } 
+        else {
+            cout << "Wrong choice";
+        }
     }
 
     return 0;
