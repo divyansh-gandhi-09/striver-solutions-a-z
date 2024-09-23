@@ -11,6 +11,7 @@ int main(){
     switch (choice){
         case 1:
             for (int i=1;i<=N;i++){
+                cout<< "less optimal";
                 sum=0;
                 for (int j=1;j<sqrt(i);j++){
                     if (i%j==0){
@@ -24,6 +25,7 @@ int main(){
                 break;
             }
         case 2:
+            cout<<"better method";
             for(int i=1;i<=N;i++){
                 total_sum+=i*(N/i);
             }
