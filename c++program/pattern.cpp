@@ -276,6 +276,26 @@ void printpattern22(int n){
 int main(){
     int n;
     cin>>n;
-    printpattern22(n); 
-    
+    printpattern1(n); 
+    printpattern2(n);
+    printpattern3(n);
+    printpattern4(n);
+    printpattern5(n);
+    printpattern6(n);
+    printpattern7(n);
+    printpattern8(n);
+    printpattern9(n);
+    printpattern10(n);
+    printpattern11(n);
+    printpattern12(n);
+    printpattern13(n);
+    printpattern14(n);
+    printpattern15(n);
+    printpattern16(n);
+    printpattern17(n);
+    printpattern18(n);
+    printpattern19(n);
+    printpattern20(n);
+    printpattern21(n);
+    printpattern22(n);
 }
